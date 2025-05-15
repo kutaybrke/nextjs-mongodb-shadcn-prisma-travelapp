@@ -115,7 +115,7 @@ const ContactForm = () => {
                         )}
                     />
                     <ReCAPTCHA
-                        sitekey="" // Replace with your actual site key
+                        sitekey="6LdQ8TYrAAAAADx-pHxu8HJ-B-W6ois88tiEbKD3" // Replace with your actual site key
                         onChange={(token) => {
                             setRecaptchaToken(token);
                             form.setValue("recaptcha", token || "");

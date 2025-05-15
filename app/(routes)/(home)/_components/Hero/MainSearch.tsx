@@ -24,7 +24,7 @@ const MainSearch = () => {
     setFormValues((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleSearch=()=>{
+  const handleSearch = () => {
     const query = new URLSearchParams(formValues).toString();
     console.log(query);
     router.push(`/search?${query}`)
@@ -39,7 +39,7 @@ const MainSearch = () => {
        items-center justify-between p-4 gap-3'>
         <Select
           defaultValue={formValues.destination}
-          onValueChange={(value)=>handleChange("destination",value)}
+          onValueChange={(value) => handleChange("destination", value)}
         >
           <SelectTrigger className="w-full py-6">
             <SelectValue placeholder="Destination" />
@@ -54,7 +54,7 @@ const MainSearch = () => {
         <Select
           defaultValue={formValues.activity}
           onValueChange={(value) => handleChange("activity", value)}
-        
+
         >
           <SelectTrigger className="w-full py-6">
             <SelectValue placeholder="Activity" />
@@ -67,8 +67,8 @@ const MainSearch = () => {
         </Select>
 
         <Select
-           defaultValue={formValues.duration}
-           onValueChange={(value) => handleChange("duration", value)}
+          defaultValue={formValues.duration}
+          onValueChange={(value) => handleChange("duration", value)}
         >
           <SelectTrigger className="w-full py-6">
             <SelectValue placeholder="0 Days - 8 Days" />
@@ -82,7 +82,7 @@ const MainSearch = () => {
         <Select
           defaultValue={formValues.price}
           onValueChange={(value) => handleChange("price", value)}
-        
+
         >
           <SelectTrigger className="w-full py-6">
             <SelectValue placeholder="$250 - $900" />
@@ -94,10 +94,10 @@ const MainSearch = () => {
           </SelectContent>
         </Select>
 
-        <Button 
-        onClick={handleSearch}
-        
-        className="bg-orange-500 text-white hover:bg-orange-600 py-6 w-full">
+        <Button
+          onClick={handleSearch}
+
+          className="bg-orange-500 text-white hover:bg-orange-600 py-6 w-full">
           Find Now
         </Button>
       </div>
