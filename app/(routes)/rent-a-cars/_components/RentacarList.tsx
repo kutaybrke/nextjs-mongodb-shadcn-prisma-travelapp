@@ -19,8 +19,6 @@ const RentacarList = () => {
     const searchParams = useSearchParams();
     const router = useRouter();
 
-
-
     useEffect(() => {
         const filters: FilterValues = {
             rating: searchParams.get("rating") || "",

@@ -18,7 +18,7 @@ const Header = () => {
         { href: "#", icon: <Instagram size={16} /> },
     ];
 
-   
+
 
     return (
         <header className='bg-black text-white'>
@@ -68,21 +68,21 @@ const Header = () => {
 
                     <nav className='hidden lg:flex space-x-8 text-lg font-semibold'>
                         {navigationLinks.map((link, index) => (
-                            <Link key={index} href={link.href} 
-                            className={`${pathname===link.href ? "text-orange-500" : "hover:text-orange-500"}`}
-                            
+                            <Link key={index} href={link.href}
+                                className={`${pathname === link.href ? "text-orange-500" : "hover:text-orange-500"}`}
+
                             >
                                 {link.label}
                             </Link>
                         ))}
                     </nav>
                     <div className='flex items-center space-x-4'>
-                       <SearchPage/>
-                       
-                        <div className="p-3 bg-sky-400 cursor-pointer text-white rounded-full">
+                        <SearchPage />
+
+                        <Link href="/login" className="p-3 bg-sky-400 cursor-pointer text-white rounded-full">
                             <User />
-                        </div>
-                        <MobileMenu/>
+                        </Link>
+                        <MobileMenu />
 
                     </div>
 
