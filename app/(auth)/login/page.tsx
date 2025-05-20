@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import Link from "next/link";
+import { signIn } from 'next-auth/react';
 
 
 const loginSchema = z.object({
@@ -43,7 +44,17 @@ const LoginPage = () => {
 
 
   const onSubmit = async (data: LoginFormValues) => {
-    console.log(data)
+    setError("")
+    const res = await signIn("credentials", {
+      email: data.email,
+      password: data.password,
+      redirect: false,
+    })
+    if (res?.error) {
+      setError("Invalid email or password")
+    } else {
+      router.push('/')
+    }
   };
 
   return (

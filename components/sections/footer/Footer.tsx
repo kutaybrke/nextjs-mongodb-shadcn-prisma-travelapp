@@ -14,7 +14,7 @@ const Footer = () => {
     { href: "#", icon: <Instagram size={16} /> },
   ];
 
- 
+
   const instagramImages = Array.from({ length: 11 }, (_, index) => `/instagram/${index + 1}.jpg`);
   return (
     <footer className='relative bg-black text-white'>
@@ -29,9 +29,9 @@ const Footer = () => {
           </p>
 
           <Link href="/register">
-          <Button className="mt-4 bg-white text-orange-500 px-6 py-2 font-semibold rounded shadow-md hover:bg-gray-100">
-            OPEN AN ACCOUNT
-          </Button>
+            <Button className="mt-4 bg-white text-orange-500 px-6 py-2 font-semibold rounded shadow-md hover:bg-gray-100">
+              OPEN AN ACCOUNT
+            </Button>
           </Link>
 
         </div>
@@ -81,8 +81,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="lg:col-span-2 mt-16">
-        <h4 className="text-xl font-bold mb-4">Instagram</h4>
-        <div className=' relative w-16 h-1 bg-orange-500'>
+          <h4 className="text-xl font-bold mb-4">Instagram</h4>
+          <div className=' relative w-16 h-1 bg-orange-500'>
             <div className='absolute top-1/2 left-0 right-0 h-[1px] bg-orange-500'></div>
             <div className='absolute h-3 w-3 bg-orange-500 rounded-full top-1/2 -translate-y-1/2 animate-move-dot'></div>
             <div className='absolute h-1.5 w-1.5 ml-0.5 bg-white rounded-full top-1/2 -translate-y-1/2 animate-move-dot'></div>
@@ -134,10 +134,6 @@ const Footer = () => {
             Copyright © 2025{" "}
             <span className='text-orange-500'>Travel</span>
           </div>
-          <div>
-            <span className='text-orange-500'>Youtube</span>  Efe Görkem Ümit
-          </div>
-
         </div>
 
       </div>
